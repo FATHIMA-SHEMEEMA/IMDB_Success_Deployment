@@ -1,0 +1,190 @@
+<!-- <html>
+    <style>
+        .result-container {
+            background-color: rgba(163, 207, 180, 0.8); /* Optional: to keep the background color with some transparency */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/02/71/50/69/360_F_271506927_WWFfd92jDIIDx6DgMflakU14o5jRPgBm.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+        }
+    </style>
+    
+
+
+
+    <body>
+
+        <center>
+            <br><br>
+            <h1 style="color: white;">IMDB SUCCESS PREDICTION</h1><br><br><br>
+
+
+        <form method="POST", action="{{url_for('home')}}" style="color: white;">
+           <b>  Director Name          :  <input type="text", name='a', placeholder=" "> 
+                Num critical reviews :  <input type="text", name='b', placeholder=" "> 
+                Duration               :  <input type="text", name='c', placeholder=" "> <br><br><br>
+                Director facebook likes: <input type="text", name='d', placeholder=" "> 
+                Actor 3 facebook likes :  <input type="text", name='e', placeholder=" "> 
+                Actor 2 Name           : <input type="text", name='f', placeholder=" "> <br><br><br>
+                Actor 1 facebook likes :  <input type="text", name='g', placeholder=" "> 
+                Gross                  :  <input type="text", name='h', placeholder=" "> 
+                Actor 1 Name           :  <input type="text", name='i', placeholder=" "> <br><br><br>
+                Num voted users        : <input type="text", name='j', placeholder=" "> 
+                Num user reviews   :  <input type="text", name='k', placeholder=" "> 
+                Budget                 : <input type="text", name='l', placeholder=" "> <br><br><br>
+                Title year             : <input type="text", name='m', placeholder=" "> 
+                Actor 2 facebook likes :  <input type="text", name='n', placeholder=" "> 
+                Movie facebook likes   : <input type="text", name='o', placeholder=" "> <br><br><br>
+            <input type="submit" , value='PREDICT' ></b>
+        </form>
+
+        <!-- <img src="{{ url_for('static', filename='images/collage.png') }}" alt="flower"> -->
+
+    <!-- </center>
+
+    </body>
+</html> 
+ --> -->
+
+
+ <html>
+    <style>
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/02/71/50/69/360_F_271506927_WWFfd92jDIIDx6DgMflakU14o5jRPgBm.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .form-group label {
+            min-width: 200px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"] {
+            width: calc(100% - 210px);
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #ccc;
+        }
+
+    </style>
+
+    <body>
+        <center>
+            <h1>IMDB SUCCESS PREDICTION</h1>
+
+            <form method="POST" action="{{url_for('home')}}">
+                <div class="form-group">
+                    <label>Director Name:</label>
+                    <input type="text" name="a" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Num critical reviews:</label>
+                    <input type="text" name="b" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Duration:</label>
+                    <input type="text" name="c" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Director Facebook likes:</label>
+                    <input type="text" name="d" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Actor 3 Facebook likes:</label>
+                    <input type="text" name="e" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Actor 2 Name:</label>
+                    <input type="text" name="f" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Actor 1 Facebook likes:</label>
+                    <input type="text" name="g" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Gross:</label>
+                    <input type="text" name="h" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Actor 1 Name:</label>
+                    <input type="text" name="i" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Num voted users:</label>
+                    <input type="text" name="j" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Num user reviews:</label>
+                    <input type="text" name="k" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Budget:</label>
+                    <input type="text" name="l" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Title year:</label>
+                    <input type="text" name="m" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Actor 2 Facebook likes:</label>
+                    <input type="text" name="n" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <label>Movie Facebook likes:</label>
+                    <input type="text" name="o" placeholder=" ">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="PREDICT">
+                </div>
+            </form>
+        </center>
+    </body>
+</html>
+
+
